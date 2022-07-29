@@ -1,10 +1,11 @@
-import { default as InputField } from './components/atoms/input/Input';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routing from './Routes';
 
 function App() {
   return (
-    <div className="App">
-      <InputField placeholder="Hello TypeScript" />
-    </div>
+    <Router>
+      <Routing />
+    </Router>
   );
 }
 
