@@ -14,11 +14,14 @@ export const LoginHeader = styled.h1`
 `;
 
 export const LoginForm = styled.form`
-  .login-input {
-    background-color: transparent;
-    border-bottom: 1px solid ${COLORS.white};
-    padding-left: 0.8rem;
+  .input-wrapper {
     margin-bottom: 7rem;
+    .login-input {
+      background-color: transparent;
+      border-bottom: 1px solid ${COLORS.white};
+      padding-left: 0.8rem;
+      margin-bottom: 1.6rem;
+    }
   }
 
   .cta-box {
