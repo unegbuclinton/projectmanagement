@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { DPIconStartBtn } from '../../icons';
 import {
   LandingPageContainer,
@@ -10,6 +11,7 @@ import {
 interface Props {}
 
 const LandingPage: React.FC<Props> = () => {
+  const navigate = useNavigate();
   return (
     <LandingPageWrapper>
       <LandingPageHeader>
@@ -21,7 +23,7 @@ const LandingPage: React.FC<Props> = () => {
         </LandingPageText>
         <div className="cta-box">
           <p className="cta-box__text"> Get Started</p>
-          <DPIconStartBtn />
+          <DPIconStartBtn onClick={() => navigate('/login')} />
         </div>
       </LandingPageContainer>
     </LandingPageWrapper>
