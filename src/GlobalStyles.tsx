@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         color: inherit;
-        background: ${COLORS.black};
+        background: ${COLORS['smoky-black']};
     }
     ::-webkit-scrollbar-thumb {
         border-radius: 5px;
