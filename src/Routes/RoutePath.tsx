@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import LandingPage from '../pages/LandingPage';
 import LoginPage from '../pages/Login';
+import Test from '../pages/test/test';
 
 const routePaths = [
   {
@@ -10,6 +11,11 @@ const routePaths = [
   {
     path: '/login',
     element: <LoginPage />,
+  },
+
+  {
+    path: '/test',
+    element: <Test />,
   },
 
   {
