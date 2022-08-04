@@ -5,6 +5,6 @@ export const SignUpSchema = Yup.object({
   email: Yup.string().email('Invalid Email').required('Email is Required'),
   password: Yup.string().required('Password is Required'),
   repeatPassword: Yup.string()
-    .oneOf([Yup.ref('password'), null], 'Passwords must match')
-    .required('Passwords do not match'),
+    .oneOf([Yup.ref('password'), null], 'Passwords ')
+    .required('Passwords is required'),
 });

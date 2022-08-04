@@ -4,7 +4,7 @@ import ErrorMessage from '../../components/atoms/ErrorMessage';
 import InputField from '../../components/atoms/input/Input';
 import { DPIconStartBtn } from '../../icons';
 import { loginSchema } from '../../validation/Schema';
-import { LoginForm, LoginHeader, LoginWrapper } from './styles';
+import { LoginForm, LoginHeader, LoginWrapper, NavigateLink } from './styles';
 
 const LoginPage: React.FC<{}> = () => {
   interface values {
@@ -65,7 +65,7 @@ const LoginPage: React.FC<{}> = () => {
           </button>
         </div>
         <p className="added-info">Don’t have an account?</p>
-        <span> Sign Up</span>
+        <NavigateLink to="/sign-up"> Sign Up</NavigateLink>
       </LoginForm>
     </LoginWrapper>
   );

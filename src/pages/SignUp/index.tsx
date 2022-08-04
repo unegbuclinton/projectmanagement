@@ -5,7 +5,7 @@ import InputField from '../../components/atoms/input/Input';
 import { DPIconStartBtn } from '../../icons';
 import { SignUpSchema } from '../../validation/SignUpSchema/SignUpSchema';
 import {
-    AddedInfo,
+  AddedInfo,
   InputWrapper,
   NavigateLink,
   OctaBoxContainer,
@@ -15,9 +15,7 @@ import {
   SignUpWrapper,
   SubmitButton,
 } from './styles';
-
 interface AppProps {}
-
 const SignUp: React.FC<AppProps> = ({}) => {
   interface values {
     fullName: string;
@@ -34,13 +32,13 @@ const SignUp: React.FC<AppProps> = ({}) => {
     },
     validationSchema: SignUpSchema,
     onSubmit: (values: values) => {
-        console.log(values)
-    }
+      console.log(values);
+    },
   });
   return (
     <SignUpWrapper>
       <SignUpHeader>Hi, lets get you started.</SignUpHeader>
-      <SignUpForm>
+      <SignUpForm onSubmit={formik.handleSubmit}>
         <InputWrapper>
           <InputField
             type="text"
@@ -56,7 +54,6 @@ const SignUp: React.FC<AppProps> = ({}) => {
             <ErrorMessage text={formik.errors.fullName} />
           ) : null}
         </InputWrapper>
-
         <InputWrapper>
           <InputField
             type="text"
@@ -72,7 +69,6 @@ const SignUp: React.FC<AppProps> = ({}) => {
             <ErrorMessage text={formik.errors.email} />
           ) : null}
         </InputWrapper>
-
         <InputWrapper>
           <InputField
             type="text"
@@ -88,7 +84,6 @@ const SignUp: React.FC<AppProps> = ({}) => {
             <ErrorMessage text={formik.errors.password} />
           ) : null}
         </InputWrapper>
-
         <InputWrapper>
           <InputField
             type="text"
@@ -105,13 +100,14 @@ const SignUp: React.FC<AppProps> = ({}) => {
           ) : null}
         </InputWrapper>
         <OctaBoxContainer>
-            <OctaText>Sign Up</OctaText>
-            <SubmitButton type='submit'>
-                <DPIconStartBtn />
-            </SubmitButton>
-            <AddedInfo>Already have an account?</AddedInfo>
-            <NavigateLink>Login</NavigateLink>
+          <OctaText>Sign Up</OctaText>
+          <SubmitButton type="submit">
+            <DPIconStartBtn />
+          </SubmitButton>
         </OctaBoxContainer>
+        <AddedInfo>
+          Already have an account?<NavigateLink to="/login">Login</NavigateLink>
+        </AddedInfo>
       </SignUpForm>
     </SignUpWrapper>
   );
