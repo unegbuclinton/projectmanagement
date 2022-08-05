@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { COLORS } from '../../constants/colors';
 import { FONTSIZES } from '../../constants/fonts';
@@ -49,10 +50,12 @@ export const LoginForm = styled.form`
     font-size: ${FONTSIZES.base};
     margin-bottom: 1.6rem;
   }
-  span {
-    font-size: ${FONTSIZES.base};
-    display: flex;
-    justify-content: center;
-    color: ${COLORS.white};
-  }
+`;
+
+export const NavigateLink = styled(Link)`
+  font-size: ${FONTSIZES.base};
+  display: flex;
+  justify-content: center;
+  color: ${COLORS.white};
+  text-decoration: none;
 `;
