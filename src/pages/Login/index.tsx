@@ -1,5 +1,6 @@
 import { useFormik } from 'formik';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../../api/registration/authentication';
 import ErrorMessage from '../../components/atoms/ErrorMessage';
 import InputField from '../../components/atoms/input/Input';
@@ -8,6 +9,7 @@ import { loginSchema } from '../../validation/Schema';
 import { LoginForm, LoginHeader, LoginWrapper, NavigateLink } from './styles';
 
 const LoginPage: React.FC<{}> = () => {
+  const navigate = useNavigate();
   interface values {
     email: string;
     password: string;
@@ -21,6 +23,8 @@ const LoginPage: React.FC<{}> = () => {
 
     onSubmit: (values: values) => {
       loginUser(values.email, values.password);
+
+      navigate('/dashboard');
     },
   });
 
