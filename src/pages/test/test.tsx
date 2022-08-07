@@ -22,10 +22,10 @@ const Test = () => {
 export default Test;
 
 const Wrapper = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 0.8rem;
-  width: 32.1rem;
   height: 30.1rem;
 
   .box-container__1,

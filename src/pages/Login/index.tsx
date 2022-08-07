@@ -1,5 +1,6 @@
 import { useFormik } from 'formik';
 import React from 'react';
+import { loginUser } from '../../api/registration/authentication';
 import ErrorMessage from '../../components/atoms/ErrorMessage';
 import InputField from '../../components/atoms/input/Input';
 import { DPIconStartBtn } from '../../icons';
@@ -19,10 +20,10 @@ const LoginPage: React.FC<{}> = () => {
     validationSchema: loginSchema,
 
     onSubmit: (values: values) => {
-      console.log(values);
+      loginUser(values.email, values.password);
     },
   });
-  console.log(formik.errors);
+
   return (
     <LoginWrapper>
       <LoginHeader>Welcome Back </LoginHeader>
