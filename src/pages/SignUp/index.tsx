@@ -1,7 +1,7 @@
 import { useFormik } from 'formik';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { registerUser } from '../../api/registration/authentication';
+import { registerUser } from '../../api/auth/authentication';
 import ErrorMessage from '../../components/atoms/ErrorMessage';
 import InputField from '../../components/atoms/input/Input';
 import { DPIconStartBtn } from '../../icons';
