@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import Dashboard from '../pages/dashboard/Dashboard';
 import LandingPage from '../pages/LandingPage';
 import LoginPage from '../pages/Login';
 import SignUp from '../pages/SignUp';
@@ -21,9 +22,12 @@ const routePaths = [
     path: '/test',
     element: <Test />,
   },
-
   {
-    path: 'dashboard/*',
+    path: '/dashboard',
+    element: <Dashboard />,
+  },
+  {
+    path: 'dash/*',
 
     element: <Outlet />,
     children: [

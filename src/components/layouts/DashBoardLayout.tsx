@@ -15,7 +15,7 @@ interface Props {
 const DashBoardLayout: React.FC<Props> = ({ children }) => {
   return (
     <DashBoardWrapper>
-      {children}
+      <DashboardContent> {children}</DashboardContent>
       <DashBoardFooter>
         <div className="footer-item">
           <DashBoardContainer>
@@ -53,12 +53,17 @@ const DashBoardLayout: React.FC<Props> = ({ children }) => {
 
 export default DashBoardLayout;
 
-const DashBoardWrapper = styled.div``;
+const DashboardContent = styled.div`
+  padding-bottom: 9rem;
+`;
+const DashBoardWrapper = styled.div`
+  height: 100%;
+`;
 
 const DashBoardFooter = styled.div`
   display: flex;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 7.8rem;
   width: 100%;
@@ -74,8 +79,9 @@ const DashBoardFooter = styled.div`
 
   .add-btn {
     position: absolute;
-    top: -35px;
-    left: 132px;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 `;
 

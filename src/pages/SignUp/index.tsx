@@ -1,5 +1,7 @@
 import { useFormik } from 'formik';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { registerUser } from '../../api/registration/authentication';
 import ErrorMessage from '../../components/atoms/ErrorMessage';
 import InputField from '../../components/atoms/input/Input';
 import { DPIconStartBtn } from '../../icons';
@@ -16,7 +18,8 @@ import {
   SubmitButton,
 } from './styles';
 interface AppProps {}
-const SignUp: React.FC<AppProps> = ({}) => {
+const SignUp: React.FC<AppProps> = () => {
+  const navigate = useNavigate();
   interface values {
     fullName: string;
     email: string;
@@ -32,7 +35,8 @@ const SignUp: React.FC<AppProps> = ({}) => {
     },
     validationSchema: SignUpSchema,
     onSubmit: (values: values) => {
-      console.log(values);
+      registerUser(values.email, values.password);
+      navigate('/dashboard');
     },
   });
   return (
