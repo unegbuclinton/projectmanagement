@@ -40,17 +40,44 @@ export const CardsContainer = styled.div`
   justify-content: space-between;
   gap: 1.5rem;
 
+  .project-num {
+    font-size: ${FONTSIZES.base};
+    margin: 1rem 0rem 1rem 1.1rem;
+    font-weight: 600;
+  }
+  .category {
+    font-size: ${FONTSIZES.xsmall};
+    margin-left: 1.1rem;
+  }
+  .icon {
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+  }
   .card-1 {
     background-color: #cfe0c3;
     width: 15.2rem;
     height: 13.5rem;
     border-radius: 0.7rem;
+
+    .project-num {
+      color: ${COLORS['grey-500']};
+    }
+    .category {
+      color: ${COLORS['grey-500']};
+    }
   }
   .card-2 {
     background-color: #5f5aa2;
     width: 15.2rem;
     height: 15.1rem;
     border-radius: 0.7rem;
+
+    .project-num {
+      color: ${COLORS.white};
+    }
+    .category {
+      color: ${COLORS.white};
+    }
   }
 
   .card-3 {
@@ -58,12 +85,26 @@ export const CardsContainer = styled.div`
     width: 14.7rem;
     height: 14.8rem;
     border-radius: 0.7rem;
+
+    .project-num {
+      color: ${COLORS.white};
+    }
+    .category {
+      color: ${COLORS.white};
+    }
   }
   .card-4 {
     background-color: #99e1d9;
     width: 14.7rem;
-    height: 12.8rem;
+    height: 13.8rem;
     border-radius: 0.7rem;
+
+    .project-num {
+      color: ${COLORS.black};
+    }
+    .category {
+      color: ${COLORS.black};
+    }
   }
 `;
 

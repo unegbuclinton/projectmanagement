@@ -1,6 +1,13 @@
 import React from 'react';
 import DashBoardLayout from '../../components/layouts/DashBoardLayout';
-import { DPIconMore, DPIconTime } from '../../icons';
+import {
+  DPIconBackLog,
+  DPIconCompleted,
+  DPIconInproogress,
+  DPIconMore,
+  DPIconPending,
+  DPIconTime,
+} from '../../icons';
 import projectImage from '../../icons/img/mobileImg.jpg';
 import {
   CardsContainer,
@@ -27,12 +34,36 @@ const Dashboard: React.FC<Prop> = () => {
       </DashboarMoreButton>
       <DashboardWrapper>
         <CardsContainer>
-          <div className="card-1"></div>
-          <div className="card-2"></div>
+          <div className="card-1">
+            <div className="icon">
+              <DPIconBackLog />
+            </div>
+            <div className="project-num">10 Projects</div>
+            <div className="category">Backlog</div>
+          </div>
+          <div className="card-2">
+            <div className="icon">
+              <DPIconCompleted />
+            </div>
+            <div className="project-num">15 Projects</div>
+            <div className="category">Completed</div>
+          </div>
         </CardsContainer>
         <CardsContainer>
-          <div className="card-3"></div>
-          <div className="card-4"></div>
+          <div className="card-3">
+            <div className="icon">
+              <DPIconInproogress />
+            </div>
+            <div className="project-num">12 Projects</div>
+            <div className="category">In Progress</div>
+          </div>
+          <div className="card-4">
+            <div className="icon">
+              <DPIconPending />
+            </div>
+            <div className="project-num">5 Projects</div>
+            <div className="category">Pending</div>
+          </div>
         </CardsContainer>
       </DashboardWrapper>
 

@@ -7,8 +7,7 @@ import { auth } from '../../Firebase-config';
 
 export const registerUser = async (email: string, password: string) => {
   try {
-    const user = await createUserWithEmailAndPassword(auth, email, password);
-    console.log(user);
+    await createUserWithEmailAndPassword(auth, email, password);
   } catch (error) {
     console.log(error);
   }
@@ -16,8 +15,7 @@ export const registerUser = async (email: string, password: string) => {
 
 export const loginUser = async (email: string, password: string) => {
   try {
-    const user = await signInWithEmailAndPassword(auth, email, password);
-    console.log(user);
+    await signInWithEmailAndPassword(auth, email, password);
   } catch (error) {
     console.log('Wrong username or password');
   }
