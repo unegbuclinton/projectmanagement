@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { COLORS } from '../../constants/colors';
 import {
@@ -13,12 +14,13 @@ interface Props {
   children: React.ReactNode;
 }
 const DashBoardLayout: React.FC<Props> = ({ children }) => {
+  const navigate: any = useNavigate();
   return (
     <DashBoardWrapper>
       <DashboardContent> {children}</DashboardContent>
       <DashBoardFooter>
         <div className="footer-item">
-          <DashBoardContainer>
+          <DashBoardContainer onClick={() => navigate('/dashboard')}>
             <span className="bar-icon">
               <DPIconDashboard />
             </span>
@@ -32,7 +34,7 @@ const DashBoardLayout: React.FC<Props> = ({ children }) => {
           </DashBoardContainer>
         </div>
         <div className="footer-item">
-          <DashBoardContainer>
+          <DashBoardContainer onClick={() => navigate('/projects')}>
             <span className="bar-icon">
               <DPIconProject />
             </span>

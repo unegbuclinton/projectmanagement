@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import DashBoardLayout from '../../components/layouts/DashBoardLayout';
 import {
   DPIconBackLog,
@@ -23,10 +24,11 @@ import {
 
 interface Prop {}
 const Dashboard: React.FC<Prop> = () => {
+  const navigate: any = useNavigate();
   return (
     <DashBoardLayout>
       <DashboardHeader>Project Summary</DashboardHeader>
-      <DashboarMoreButton>
+      <DashboarMoreButton onClick={() => navigate('/projects')}>
         <p>See all</p>
         <span>
           <DPIconMore />

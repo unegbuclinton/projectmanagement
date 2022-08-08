@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Dashboard from '../pages/dashboard/Dashboard';
 import LandingPage from '../pages/LandingPage';
 import LoginPage from '../pages/Login';
+import ProjectsPage from '../pages/projects';
 import SignUp from '../pages/SignUp';
 import Test from '../pages/test/test';
 
@@ -25,6 +26,10 @@ const routePaths = [
   {
     path: '/dashboard',
     element: <Dashboard />,
+  },
+  {
+    path: '/projects',
+    element: <ProjectsPage />,
   },
   {
     path: 'dash/*',
