@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { COLORS } from '../../constants/colors';
+import { FONTSIZES } from '../../constants/fonts';
 import {
   DPIconAddButton,
   DPIconDashboard,
@@ -9,14 +10,60 @@ import {
   DPIconProject,
   DPIconSettings,
 } from '../../icons';
+import img from '../../icons/img/profile.jpg';
+import ProfileDropDown from '../molecules/profileDropdown';
 
 interface Props {
   children: React.ReactNode;
+  text?: string;
 }
-const DashBoardLayout: React.FC<Props> = ({ children }) => {
+
+const DashBoardLayout: React.FC<Props> = ({ children, text }) => {
+  const [header, setHeader] = useState(false);
+  const [showNav, setShowNav] = useState(false);
+
+  const ChangeNavbar = () => {
+    if (window.scrollY >= 90) {
+      setHeader(true);
+    } else {
+      setHeader(false);
+    }
+  };
+
+  window.addEventListener('scroll', ChangeNavbar);
+
   const navigate: any = useNavigate();
+
+  const ref: any = useRef();
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e: any) => {
+      if (showNav && ref.current && !ref.current.contains(e.target)) {
+        setShowNav(false);
+      }
+    };
+
+    document.body.addEventListener('mousedown', checkIfClickedOutside);
+
+    return () => {
+      document.body.removeEventListener('mousedown', checkIfClickedOutside);
+    };
+  }, [showNav]);
+
   return (
     <DashBoardWrapper>
+      <DashBoardHeader header={header}>
+        <h1 className="dashboard-header"> {text}</h1>
+        <div
+          className="img-container"
+          onClick={() => setShowNav((prev) => !prev)}
+          ref={ref}
+        >
+          <img src={img} alt="" />
+        </div>
+      </DashBoardHeader>
+      {showNav && <ProfileDropDown />}
+
       <DashboardContent> {children}</DashboardContent>
       <DashBoardFooter>
         <div className="footer-item">
@@ -55,13 +102,41 @@ const DashBoardLayout: React.FC<Props> = ({ children }) => {
 
 export default DashBoardLayout;
 
+const DashBoardWrapper = styled.div`
+  height: 100%;
+  position: relative;
+`;
+
+const DashBoardHeader = styled.div<{ header: boolean }>`
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem 3rem 0 2rem;
+  padding: 2rem 0;
+  background: ${({ header }) => (header ? '#101010' : 'transparent')};
+  .dashboard-header {
+    color: ${COLORS.white};
+    font-size: ${FONTSIZES.xxlarge};
+  }
+
+  .img-container {
+    width: 4rem;
+    border-radius: 50%;
+    height: 4rem;
+    border: 1px solid ${COLORS.white};
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+  }
+`;
 const DashboardContent = styled.div`
   padding-bottom: 9rem;
 `;
-const DashBoardWrapper = styled.div`
-  height: 100%;
-`;
-
 const DashBoardFooter = styled.div`
   display: flex;
   justify-content: space-between;

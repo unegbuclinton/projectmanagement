@@ -6,19 +6,7 @@ import ProjectsPage from '../pages/projects';
 import SignUp from '../pages/SignUp';
 import Test from '../pages/test/test';
 
-const routePaths = [
-  {
-    path: '/',
-    element: <LandingPage />,
-  },
-  {
-    path: '/login',
-    element: <LoginPage />,
-  },
-  {
-    path: '/sign-up',
-    element: <SignUp />,
-  },
+export const privateRoutes = [
   {
     path: '/test',
     element: <Test />,
@@ -56,4 +44,23 @@ const routePaths = [
   },
 ];
 
-export default routePaths;
+export const publicRoutes = [
+  {
+    path: '/',
+    element: <LandingPage />,
+  },
+  {
+    path: '/login',
+    element: <LoginPage />,
+  },
+  {
+    path: '/sign-up',
+    element: <SignUp />,
+    children: [
+      {
+        path: '/',
+        element: <div> Hello World</div>,
+      },
+    ],
+  },
+];

@@ -7,7 +7,7 @@ import { DPIconHorizontalDots, DPIconPlus, DPIconTime } from '../../icons';
 
 const ProjectsPage = () => {
   return (
-    <DashBoardLayout>
+    <DashBoardLayout text="Clinton">
       <ProjectHeader>Projects</ProjectHeader>
       <ProjectWrapper>
         <ProjectContainer>
@@ -87,7 +87,7 @@ const ProjectHeader = styled.h1`
   font-size: ${FONTSIZES.xxlarge};
   color: ${COLORS.white};
   margin-left: 1.5rem;
-  margin-top: 6.8rem;
+  margin-top: 3.8rem;
   margin-bottom: 2.7rem;
 `;
 

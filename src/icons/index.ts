@@ -4,6 +4,7 @@ export { ReactComponent as DPIconCompleted } from './svgs/completed.svg';
 export { ReactComponent as DPIconDashboard } from './svgs/dashboard-icon.svg';
 export { ReactComponent as DPIconHorizontalDots } from './svgs/dots.svg';
 export { ReactComponent as DPIconInproogress } from './svgs/in-progress.svg';
+export { ReactComponent as DPIconLogout } from './svgs/logout.svg';
 export { ReactComponent as DPIconMessage } from './svgs/messages-icon.svg';
 export { ReactComponent as DPIconMore } from './svgs/more.svg';
 export { ReactComponent as DPIconPending } from './svgs/pending.svg';
