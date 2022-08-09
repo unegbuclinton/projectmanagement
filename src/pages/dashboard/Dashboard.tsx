@@ -26,7 +26,7 @@ interface Prop {}
 const Dashboard: React.FC<Prop> = () => {
   const navigate: any = useNavigate();
   return (
-    <DashBoardLayout>
+    <DashBoardLayout text="Welcome!">
       <DashboardHeader>Project Summary</DashboardHeader>
       <DashboarMoreButton onClick={() => navigate('/projects')}>
         <p>See all</p>

@@ -12,9 +12,9 @@ export const DashboardWrapper = styled.div`
 
 export const DashboardHeader = styled.h1`
   color: ${COLORS.white};
-  font-size: ${FONTSIZES.lg};
+  font-size: ${FONTSIZES.xxlarge};
   font-weight: ${FONTWEIGHTS.bold};
-  margin: 6.8rem 0 2.2rem 2.4rem;
+  margin: 3.8rem 0 2.2rem 2rem;
 `;
 export const DashboarMoreButton = styled.div`
   display: flex;
