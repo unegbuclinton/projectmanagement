@@ -1,12 +1,15 @@
 import { useFormik } from 'formik';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { loginUser } from '../../api/auth/authentication';
 import ErrorMessage from '../../components/atoms/ErrorMessage';
 import InputField from '../../components/atoms/input/Input';
 import { DPIconStartBtn } from '../../icons';
 import { loginSchema } from '../../validation/Schema';
-import { LoginForm, LoginHeader, LoginWrapper } from './styles';
+import { LoginForm, LoginHeader, LoginWrapper, NavigateLink } from './styles';
 
 const LoginPage: React.FC<{}> = () => {
+  const navigate = useNavigate();
   interface values {
     email: string;
     password: string;
@@ -19,10 +22,12 @@ const LoginPage: React.FC<{}> = () => {
     validationSchema: loginSchema,
 
     onSubmit: (values: values) => {
-      console.log(values);
+      loginUser(values.email, values.password);
+
+      navigate('/dashboard');
     },
   });
-  console.log(formik.errors);
+
   return (
     <LoginWrapper>
       <LoginHeader>Welcome Back </LoginHeader>
@@ -65,7 +70,7 @@ const LoginPage: React.FC<{}> = () => {
           </button>
         </div>
         <p className="added-info">Don’t have an account?</p>
-        <span> Sign Up</span>
+        <NavigateLink to="/sign-up"> Sign Up</NavigateLink>
       </LoginForm>
     </LoginWrapper>
   );
