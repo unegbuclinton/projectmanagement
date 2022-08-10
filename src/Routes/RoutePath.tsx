@@ -56,9 +56,13 @@ export const publicRoutes = [
   {
     path: '/sign-up',
     element: <SignUp />,
+  },
+  {
+    path: '/sign',
+    element: <SignUp />,
     children: [
       {
-        path: '/',
+        path: 'no-path',
         element: <div> Hello World</div>,
       },
     ],
