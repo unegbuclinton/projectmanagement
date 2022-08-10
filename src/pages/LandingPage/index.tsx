@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { DPIconStartBtn } from '../../icons';
+import { DPIconDashboardBall, DPIconStartBtn } from '../../icons';
 import {
   LandingPageContainer,
   LandingPageHeader,
@@ -14,6 +14,7 @@ const LandingPage: React.FC<Props> = () => {
   const navigate = useNavigate();
   return (
     <LandingPageWrapper>
+      <DPIconDashboardBall className='ball-icon' />
       <LandingPageHeader>
         Work and Grow in a more organizes way.
       </LandingPageHeader>
@@ -21,8 +22,8 @@ const LandingPage: React.FC<Props> = () => {
         <LandingPageText>
           Create,collaborate and organize your project in one place.
         </LandingPageText>
-        <div className="cta-box">
-          <p className="cta-box__text"> Get Started</p>
+        <div className='cta-box'>
+          <p className='cta-box__text'> Get Started</p>
           <DPIconStartBtn onClick={() => navigate('/login')} />
         </div>
       </LandingPageContainer>

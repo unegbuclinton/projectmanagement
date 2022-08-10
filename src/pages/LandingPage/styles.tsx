@@ -18,6 +18,10 @@ export const LandingPageWrapper = styled.div`
       font-size: ${FONTSIZES.xxlarge};
     }
   }
+  .ball-icon {
+    display: flex;
+    justify-content: right;
+  }
 `;
 
 export const LandingPageContainer = styled.div`
