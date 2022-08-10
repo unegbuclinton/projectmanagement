@@ -4,6 +4,7 @@ import DashBoardLayout from '../../components/layouts/DashBoardLayout';
 import { COLORS } from '../../constants/colors';
 import { FONTSIZES, FONTWEIGHTS } from '../../constants/fonts';
 import { DPIconHorizontalDots, DPIconPlus, DPIconTime } from '../../icons';
+import projectImage from '../../icons/img/mobileImg.jpg';
 
 const ProjectsPage = () => {
   return (
@@ -35,6 +36,86 @@ const ProjectsPage = () => {
               </div>
               <p className="project-status"> In progress</p>
             </ProjectsItem>
+            <ProjectsItem>
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
+            <ProjectsItem>
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
+            <ProjectsItem>
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
+            <ProjectsItem>
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
+            <ProjectsItem>
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
           </ProjectBox>
           <ProjectBox className="project-box">
             <div className="box-top">
@@ -43,6 +124,55 @@ const ProjectsPage = () => {
                 <DPIconPlus />
               </div>
             </div>
+            <ProjectsItem>
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
+            <ProjectsItem>
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
+            <ProjectsItem>
+              <ProjectImg src={projectImage} />
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
           </ProjectBox>
           <ProjectBox className="project-box">
             <div className="box-top">
@@ -51,6 +181,54 @@ const ProjectsPage = () => {
                 <DPIconPlus />
               </div>
             </div>
+            <ProjectsItem>
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
+            <ProjectsItem>
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
+            <ProjectsItem>
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
           </ProjectBox>
           <ProjectBox className="project-box">
             <div className="box-top">
@@ -60,6 +238,54 @@ const ProjectsPage = () => {
                 <DPIconHorizontalDots />
               </div>
             </div>
+            <ProjectsItem>
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
+            <ProjectsItem>
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
+            <ProjectsItem>
+              <div className="project-info">
+                <p className="project-info__header">Market Analysis</p>
+                <p className="project-info__time">
+                  <span>
+                    <DPIconTime />
+                  </span>
+                  Aug 25 2022
+                </p>
+              </div>
+              <ProjectDescription>Business Market Research </ProjectDescription>
+              <div className="project-assignee">
+                <div className="project-assignee__item"> UC</div>
+              </div>
+              <p className="project-status"> In progress</p>
+            </ProjectsItem>
           </ProjectBox>
         </ProjectContainer>
       </ProjectWrapper>
@@ -122,7 +348,7 @@ export const ProjectsItem = styled.div`
   margin: 2rem auto;
   width: 25.1rem;
   background-color: ${COLORS.white};
-  padding: 1.6rem 1.9rem 1.1rem 1.7rem;
+  padding: 1.6rem 1.1rem 1.1rem 1.2rem;
   border-radius: 0.8rem;
 
   .project-status {
@@ -162,4 +388,11 @@ export const ProjectsItem = styled.div`
       gap: 0.3rem;
     }
   }
+`;
+
+export const ProjectImg = styled.img`
+  width: 100%;
+  object-fit: cover;
+  height: 80px;
+  margin-bottom: 1.2rem;
 `;

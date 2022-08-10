@@ -113,12 +113,13 @@ const DashBoardHeader = styled.div<{ header: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5rem 3rem 0 2rem;
+  margin-top: 5rem;
   padding: 2rem 0;
   background: ${({ header }) => (header ? '#101010' : 'transparent')};
   .dashboard-header {
     color: ${COLORS.white};
     font-size: ${FONTSIZES.xxlarge};
+    margin-left: 2rem;
   }
 
   .img-container {
@@ -126,6 +127,7 @@ const DashBoardHeader = styled.div<{ header: boolean }>`
     border-radius: 50%;
     height: 4rem;
     border: 1px solid ${COLORS.white};
+    margin-right: 3rem;
     img {
       width: 100%;
       height: 100%;
