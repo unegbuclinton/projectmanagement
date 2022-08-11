@@ -11,6 +11,7 @@ import {
   DPIconSettings,
 } from '../../icons';
 import img from '../../icons/img/profile.jpg';
+import { CreateProjectModal } from '../molecules/CreateProjectModal';
 import ProfileDropDown from '../molecules/profileDropdown';
 
 interface Props {
@@ -21,6 +22,7 @@ interface Props {
 const DashBoardLayout: React.FC<Props> = ({ children, text }) => {
   const [header, setHeader] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const ChangeNavbar = () => {
     if (window.scrollY >= 90) {
@@ -51,52 +53,66 @@ const DashBoardLayout: React.FC<Props> = ({ children, text }) => {
   }, [showNav]);
 
   return (
-    <DashBoardWrapper>
-      <DashBoardHeader header={header}>
-        <h1 className="dashboard-header"> {text}</h1>
-        <div
-          className="img-container"
-          onClick={() => setShowNav((prev) => !prev)}
-          ref={ref}
-        >
-          <img src={img} alt="" />
-        </div>
-      </DashBoardHeader>
-      {showNav && <ProfileDropDown />}
+    <>
+      <DashBoardWrapper>
+        <DashBoardHeader header={header}>
+          <h1 className='dashboard-header'> {text}</h1>
+          <div
+            className='img-container'
+            onClick={() => setShowNav((prev) => !prev)}
+            ref={ref}
+          >
+            <img src={img} alt='' />
+          </div>
+        </DashBoardHeader>
+        {showNav && <ProfileDropDown />}
 
-      <DashboardContent> {children}</DashboardContent>
-      <DashBoardFooter>
-        <div className="footer-item">
-          <DashBoardContainer onClick={() => navigate('/dashboard')}>
-            <span className="bar-icon">
-              <DPIconDashboard />
-            </span>
-            {/* <span className="bar-text">DashBoard </span> */}
-          </DashBoardContainer>
-          <DashBoardContainer>
-            <span className="bar-icon">
-              <DPIconMessage />
-            </span>
-            {/* <span className="bar-text">Message </span> */}
-          </DashBoardContainer>
-        </div>
-        <div className="footer-item">
-          <DashBoardContainer onClick={() => navigate('/projects')}>
-            <span className="bar-icon">
-              <DPIconProject />
-            </span>
-            {/* <span className="bar-text">Projects </span> */}
-          </DashBoardContainer>
-          <DashBoardContainer>
-            <span className="bar-icon">
-              <DPIconSettings />
-            </span>
-            {/* <span className="bar-text">Settings </span> */}
-          </DashBoardContainer>
-        </div>
-        <DPIconAddButton className="add-btn" />
-      </DashBoardFooter>
-    </DashBoardWrapper>
+        <DashboardContent> {children}</DashboardContent>
+        <DashBoardFooter>
+          <div className='footer-item'>
+            <DashBoardContainer onClick={() => navigate('/dashboard')}>
+              <span className='bar-icon'>
+                <DPIconDashboard />
+              </span>
+              {/* <span className="bar-text">DashBoard </span> */}
+            </DashBoardContainer>
+            <DashBoardContainer>
+              <span className='bar-icon'>
+                <DPIconMessage />
+              </span>
+              {/* <span className="bar-text">Message </span> */}
+            </DashBoardContainer>
+          </div>
+          <div className='footer-item'>
+            <DashBoardContainer onClick={() => navigate('/projects')}>
+              <span className='bar-icon'>
+                <DPIconProject />
+              </span>
+              {/* <span className="bar-text">Projects </span> */}
+            </DashBoardContainer>
+            <DashBoardContainer>
+              <span className='bar-icon'>
+                <DPIconSettings />
+              </span>
+              {/* <span className="bar-text">Settings </span> */}
+            </DashBoardContainer>
+          </div>
+          <DPIconAddButton
+            className='add-btn'
+            onClick={() => {
+              setOpen(true);
+              console.log(open);
+            }}
+          />
+        </DashBoardFooter>
+      </DashBoardWrapper>
+      <CreateProjectModal
+        isShown={open}
+        onClose={() => {
+          setOpen(false);
+        }}
+      />
+    </>
   );
 };
 

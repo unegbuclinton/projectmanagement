@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import { CreateProject } from '../pages/CreateProject';
 import Dashboard from '../pages/dashboard/Dashboard';
 import LandingPage from '../pages/LandingPage';
 import LoginPage from '../pages/Login';
@@ -41,6 +42,10 @@ export const privateRoutes = [
         element: <div> Hello World</div>,
       },
     ],
+  },
+  {
+    path: '/create-project',
+    element: <CreateProject />,
   },
 ];
 
