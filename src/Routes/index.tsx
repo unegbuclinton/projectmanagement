@@ -87,9 +87,6 @@ const Routing = () => {
           />
         );
       })}
-      {/* <Route
-    path="/login"
-    element={<LogIn onClick={()=>{setisLogged(true)}}/>}/> */}
     </Routes>
   );
 };
