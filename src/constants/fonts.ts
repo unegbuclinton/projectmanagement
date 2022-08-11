@@ -6,6 +6,7 @@ export const FONTSIZES = {
   xlarge: '2rem',
   xxlarge: '2.4rem',
   xxxlarge: '2.6rem',
+  huge: '3.1rem',
   'logo-large': '3.383rem',
 };
 
