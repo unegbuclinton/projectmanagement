@@ -11,7 +11,6 @@ import {
   DPIconSettings,
 } from '../../icons';
 import img from '../../icons/img/profile.jpg';
-import { CreateProjectModal } from '../molecules/CreateProjectModal';
 import ProfileDropDown from '../molecules/profileDropdown';
 
 interface Props {
@@ -23,8 +22,6 @@ interface Props {
 const DashBoardLayout: React.FC<Props> = ({ children, text, onClick }) => {
   const [header, setHeader] = useState(false);
   const [showNav, setShowNav] = useState(false);
-  const [open, setOpen] = useState(false);
-
   const ChangeNavbar = () => {
     if (window.scrollY >= 90) {
       setHeader(true);
