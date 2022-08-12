@@ -6,9 +6,11 @@ export const Input = styled.input`
   border: none;
   width: 100%;
   height: 4.4rem;
-  border-radius: 5px;
   color: ${COLORS.white};
-  padding: 20px;
+  background-color: transparent;
+  border-bottom: 1px solid ${COLORS.white};
+  padding-left: 0.8rem;
+  margin-bottom: 1rem;
 `;
 
 export const Container = styled.div``;
