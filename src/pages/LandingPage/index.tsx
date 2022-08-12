@@ -21,8 +21,8 @@ const LandingPage: React.FC<Props> = () => {
         <LandingPageText>
           Create,collaborate and organize your project in one place.
         </LandingPageText>
-        <div className="cta-box">
-          <p className="cta-box__text"> Get Started</p>
+        <div className='cta-box'>
+          <p className='cta-box__text'> Get Started</p>
           <DPIconStartBtn onClick={() => navigate('/login')} />
         </div>
       </LandingPageContainer>

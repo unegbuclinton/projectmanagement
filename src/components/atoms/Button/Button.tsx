@@ -1,21 +1,27 @@
 import React from 'react';
+import styled from 'styled-components';
 
 type ButtonProps = {
   disabled?: boolean;
   className?: string;
-  children: string;
+  children: React.ReactNode;
   pill?: string;
   type: string;
   alias?: string;
   loading?: string;
 };
 
-const Button: React.FC<ButtonProps> = ({className, disabled}) => {
+const Button: React.FC<ButtonProps> = ({ className, disabled, children }) => {
   return (
-    <button className={className} disabled={disabled}>
-      Button
-    </button>
+    <ButtonWrapper className={className} disabled={disabled}>
+      {children}
+    </ButtonWrapper>
   );
 };
 
 export default Button;
+
+const ButtonWrapper = styled.button`
+  outline: none;
+  border: none;
+`;

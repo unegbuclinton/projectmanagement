@@ -18,12 +18,6 @@ export const SignUpForm = styled.form``;
 
 export const InputWrapper = styled.div`
   margin-bottom: 2.4rem;
-  .signup-input {
-    background-color: transparent;
-    border-bottom: 1px solid ${COLORS.white};
-    padding-left: 0.8rem;
-    margin-bottom: 1.6rem;
-  }
 `;
 
 export const OctaBoxContainer = styled.div`

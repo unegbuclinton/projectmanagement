@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Input } from './styles';
 
 interface Props {
-  placeholder: string;
+  placeholder?: string;
   type: string;
   className?: string;
   inputClass?: string;
