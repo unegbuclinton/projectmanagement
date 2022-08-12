@@ -16,9 +16,10 @@ import ProfileDropDown from '../molecules/profileDropdown';
 interface Props {
   children: React.ReactNode;
   text?: string;
+  onClick?: () => void;
 }
 
-const DashBoardLayout: React.FC<Props> = ({ children, text }) => {
+const DashBoardLayout: React.FC<Props> = ({ children, text, onClick }) => {
   const [header, setHeader] = useState(false);
   const [showNav, setShowNav] = useState(false);
 
@@ -94,7 +95,7 @@ const DashBoardLayout: React.FC<Props> = ({ children, text }) => {
             {/* <span className="bar-text">Settings </span> */}
           </DashBoardContainer>
         </div>
-        <DPIconAddButton className="add-btn" />
+        <DPIconAddButton className="add-btn" onClick={onClick} />
       </DashBoardFooter>
     </DashBoardWrapper>
   );

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import DashBoardLayout from '../../components/layouts/DashBoardLayout';
+import Modal from '../../components/layouts/modal/Modal';
 import {
   DPIconBackLog,
   DPIconCompleted,
@@ -25,8 +26,15 @@ import {
 interface Prop {}
 const Dashboard: React.FC<Prop> = () => {
   const navigate: any = useNavigate();
+
+  const [show, setShow] = useState(false);
   return (
-    <DashBoardLayout text="Welcome!">
+    <DashBoardLayout text="Welcome!" onClick={() => setShow(true)}>
+      <Modal show={show} hide={() => setShow(false)}>
+        <div
+          style={{ width: '120px', height: '150px', background: 'red' }}
+        ></div>
+      </Modal>
       <DashboardHeader>Project Summary</DashboardHeader>
       <DashboarMoreButton onClick={() => navigate('/projects')}>
         <p>See all</p>
