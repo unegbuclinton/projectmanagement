@@ -13,6 +13,7 @@ export const FONTSIZES = {
 export const FONTWEIGHTS = {
   normal: 400,
   medium: 500,
+  Hmedium: 600,
   bold: 700,
   xbold: 900,
 };

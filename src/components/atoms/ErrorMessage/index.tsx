@@ -13,6 +13,7 @@ const ErrorMessage: React.FC<Props> = ({ text }) => {
 export default ErrorMessage;
 
 const TextMessage = styled.p`
-  color: ${COLORS.white};
+  margin: 0;
+  color: red;
   font-size: ${FONTSIZES.small};
 `;

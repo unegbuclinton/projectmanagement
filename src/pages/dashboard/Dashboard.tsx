@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import DashBoardLayout from '../../components/layouts/DashBoardLayout';
-import Modal from '../../components/layouts/modal/Modal';
+import { CreateProjectModal } from '../../components/molecules/CreateProjectModal';
+
 import {
   DPIconBackLog,
   DPIconCompleted,
@@ -30,11 +31,7 @@ const Dashboard: React.FC<Prop> = () => {
   const [show, setShow] = useState(false);
   return (
     <DashBoardLayout text="Welcome!" onClick={() => setShow(true)}>
-      <Modal show={show} hide={() => setShow(false)}>
-        <div
-          style={{ width: '120px', height: '150px', background: 'red' }}
-        ></div>
-      </Modal>
+      <CreateProjectModal show={show} hide={() => setShow(false)} />
       <DashboardHeader>Project Summary</DashboardHeader>
       <DashboarMoreButton onClick={() => navigate('/projects')}>
         <p>See all</p>

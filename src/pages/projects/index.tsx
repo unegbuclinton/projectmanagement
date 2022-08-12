@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import DashBoardLayout from '../../components/layouts/DashBoardLayout';
+import { CreateProjectModal } from '../../components/molecules/CreateProjectModal';
 import { COLORS } from '../../constants/colors';
 import { FONTSIZES, FONTWEIGHTS } from '../../constants/fonts';
 import { DPIconHorizontalDots, DPIconPlus, DPIconTime } from '../../icons';
 import projectImage from '../../icons/img/mobileImg.jpg';
 
 const ProjectsPage = () => {
+  const [show, setShow] = useState(false);
   return (
-    <DashBoardLayout text="Clinton">
+    <DashBoardLayout text="Clinton" onClick={() => setShow(true)}>
+      <CreateProjectModal show={show} hide={() => setShow(false)} />
       <ProjectHeader>Projects</ProjectHeader>
       <ProjectWrapper>
         <ProjectContainer>

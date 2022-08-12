@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { COLORS } from '../../../constants/colors';
-import { DPIconCancelBtn } from '../../../icons';
+import { COLORS } from '../../constants/colors';
+import { DPIconCancelBtn } from '../../icons';
 
 interface Props {
   children: React.ReactNode;
