@@ -1,5 +1,6 @@
 export { ReactComponent as DPIconAddButton } from './svgs/add-btn.svg';
 export { ReactComponent as DPIconBackLog } from './svgs/backlog.svg';
+export { ReactComponent as DPIconCancelBtn } from './svgs/cancel.svg';
 export { ReactComponent as DPIconCompleted } from './svgs/completed.svg';
 export { ReactComponent as DPIconDashboard } from './svgs/dashboard-icon.svg';
 export { ReactComponent as DPIconHorizontalDots } from './svgs/dots.svg';

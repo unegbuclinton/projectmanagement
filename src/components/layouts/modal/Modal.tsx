@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { COLORS } from '../../../constants/colors';
+import { DPIconCancelBtn } from '../../../icons';
 
 interface Props {
   children: React.ReactNode;
@@ -11,7 +13,10 @@ const Modal: React.FC<Props> = ({ children, show, hide }) => {
     return null;
   }
   return (
-    <ModalWrapper onClick={hide}>
+    <ModalWrapper>
+      <span className="cancel-btn" onClick={hide}>
+        <DPIconCancelBtn />
+      </span>
       <ModalContent>{children}</ModalContent>
     </ModalWrapper>
   );
@@ -29,6 +34,13 @@ const ModalWrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
+
+  .cancel-btn {
+    position: absolute;
+    color: ${COLORS.white};
+    top: 20px;
+    right: 20px;
+  }
 `;
 
 const ModalContent = styled.div`
