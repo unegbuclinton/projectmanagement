@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { COLORS } from '../../../constants/colors';
 import { FONTSIZES } from '../../../constants/fonts';
 
 interface Props {

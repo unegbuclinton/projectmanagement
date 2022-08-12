@@ -1,6 +1,6 @@
 import { useFormik } from 'formik';
 import React from 'react';
-import { CreateProjectSchema } from '../../../validation/CreateProjectSchema/index';
+
 import ErrorMessage from '../../atoms/ErrorMessage/index';
 import InputField from '../../atoms/input/Input';
 import {
@@ -13,6 +13,7 @@ import {
 } from './styles';
 
 import { DPIconAssignee, DPIconCalendar } from '../../../icons';
+import { CreateProjectSchema } from '../../../validation/CreateProjectSchema';
 import Button from '../../atoms/Button/Button';
 
 interface Props {}
