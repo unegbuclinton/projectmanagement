@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { COLORS } from '../../constants/colors';
 import { FONTSIZES } from '../../constants/fonts';
@@ -32,8 +32,6 @@ const DashBoardLayout: React.FC<Props> = ({ children, text, onClick }) => {
 
   window.addEventListener('scroll', ChangeNavbar);
 
-  const navigate: any = useNavigate();
-
   const ref: any = useRef();
 
   useEffect(() => {
@@ -50,6 +48,18 @@ const DashBoardLayout: React.FC<Props> = ({ children, text, onClick }) => {
     };
   }, [showNav]);
 
+  const navItem1 = [
+    {
+      icon: <DPIconDashboard className="icon-dashboard" />,
+      path: '/dashboard',
+    },
+    { icon: <DPIconMessage className="icon-dashboard" />, path: '/message' },
+  ];
+
+  const navItem2 = [
+    { icon: <DPIconProject className="icon-dashboard" />, path: '/projects' },
+    { icon: <DPIconSettings className="icon-dashboard" />, path: '/settings' },
+  ];
   return (
     <DashBoardWrapper>
       <DashBoardHeader header={header}>
@@ -67,32 +77,30 @@ const DashBoardLayout: React.FC<Props> = ({ children, text, onClick }) => {
       <DashboardContent> {children}</DashboardContent>
       <DashBoardFooter>
         <div className="footer-item">
-          <DashBoardContainer onClick={() => navigate('/dashboard')}>
-            <span className="bar-icon">
-              <DPIconDashboard />
-            </span>
-            {/* <span className="bar-text">DashBoard </span> */}
-          </DashBoardContainer>
-          <DashBoardContainer onClick={() => navigate('/message')}>
-            <span className="bar-icon">
-              <DPIconMessage />
-            </span>
-            {/* <span className="bar-text">Message </span> */}
-          </DashBoardContainer>
+          {navItem1?.map(({ icon, path }, idx) => (
+            <NavLink
+              key={idx}
+              to={path}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? 'nav-link--selected' : ''}`
+              }
+            >
+              {icon}
+            </NavLink>
+          ))}
         </div>
         <div className="footer-item">
-          <DashBoardContainer onClick={() => navigate('/projects')}>
-            <span className="bar-icon">
-              <DPIconProject />
-            </span>
-            {/* <span className="bar-text">Projects </span> */}
-          </DashBoardContainer>
-          <DashBoardContainer onClick={() => navigate('/settings')}>
-            <span className="bar-icon">
-              <DPIconSettings />
-            </span>
-            {/* <span className="bar-text">Settings </span> */}
-          </DashBoardContainer>
+          {navItem2?.map(({ icon, path }, idx) => (
+            <NavLink
+              key={idx}
+              to={path}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? 'nav-link--selected' : ''}`
+              }
+            >
+              {icon}
+            </NavLink>
+          ))}
         </div>
         <DPIconAddButton className="add-btn" onClick={onClick} />
       </DashBoardFooter>
@@ -152,7 +160,18 @@ const DashBoardFooter = styled.div`
 
   .footer-item {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
+
+    .nav-link {
+      .icon-dashboard {
+        fill: #fff;
+      }
+      &--selected {
+        .icon-dashboard {
+          fill: #806038;
+        }
+      }
+    }
   }
 
   .add-btn {
@@ -160,13 +179,5 @@ const DashBoardFooter = styled.div`
     top: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-`;
-
-const DashBoardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  .bar-text {
-    color: ${COLORS.white};
   }
 `;

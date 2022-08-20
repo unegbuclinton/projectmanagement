@@ -40,7 +40,6 @@ export const CreateprojectForm = styled.form``;
 export const InputWrapperr = styled.div`
   margin-bottom: 2.4rem;
   .input-style {
-    background-color: transparent;
     border-bottom: 1px solid ${COLORS.black};
     padding-left: 0.8rem;
     color: ${COLORS.black};
@@ -48,7 +47,7 @@ export const InputWrapperr = styled.div`
   .details-container {
     display: flex;
     align-items: center;
-    gap: 0.7rem;
+    gap: 1.7rem;
 
     p {
       font-size: ${FONTSIZES.small};
