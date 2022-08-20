@@ -300,6 +300,7 @@ export default ProjectsPage;
 
 const ProjectWrapper = styled.div`
   max-width: 100%;
+  height: 65vh;
   display: flex;
 `;
 
@@ -313,7 +314,7 @@ const ProjectContainer = styled.div`
 `;
 
 const ProjectHeader = styled.h1`
-  font-size: ${FONTSIZES.xxlarge};
+  font-size: ${FONTSIZES.xlarge};
   color: ${COLORS.white};
   margin-left: 1.5rem;
   margin-top: 3.8rem;
@@ -321,15 +322,16 @@ const ProjectHeader = styled.h1`
 `;
 
 const ProjectBox = styled.div`
+  overflow-y: scroll;
   width: 100%;
   scroll-snap-align: start;
-  flex: 1 0 35%;
+  flex: 1 0 72%;
 
   .box-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 25.5rem;
+    width: 23.5rem;
     height: 5.2rem;
     background-color: ${COLORS.black};
     border-radius: 1rem;
@@ -349,7 +351,7 @@ export const ProjectDescription = styled.div`
 
 export const ProjectsItem = styled.div`
   margin: 2rem auto;
-  width: 25.1rem;
+  width: 23.1rem;
   background-color: ${COLORS.white};
   padding: 1.6rem 1.1rem 1.1rem 1.2rem;
   border-radius: 0.8rem;

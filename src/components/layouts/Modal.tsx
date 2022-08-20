@@ -13,11 +13,13 @@ const Modal: React.FC<Props> = ({ children, show, hide }) => {
     return null;
   }
   return (
-    <ModalWrapper>
+    <ModalWrapper onClick={hide}>
       <span className="cancel-btn" onClick={hide}>
         <DPIconCancelBtn />
       </span>
-      <ModalContent>{children}</ModalContent>
+      <ModalContent onClick={(e) => e.stopPropagation()}>
+        {children}
+      </ModalContent>
     </ModalWrapper>
   );
 };

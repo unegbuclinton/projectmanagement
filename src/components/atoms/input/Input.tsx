@@ -1,5 +1,6 @@
-import React from 'react';
-import { Container, Input } from './styles';
+import React, { useState } from 'react';
+import { DPIconHide, DPIconUnHide } from '../../../icons';
+import { Container, Input, InputFieldIcon } from './styles';
 
 interface Props {
   placeholder?: string;
@@ -23,11 +24,13 @@ const InputField: React.FC<Props> = ({
   onBlur,
   onChange,
 }) => {
+  const [show, setShow] = useState(false);
+  const toggleShowPassword = () => setShow((prev) => !prev);
   return (
     <Container className={className}>
       <Input
         placeholder={placeholder}
-        type={type}
+        type={type === 'password' ? (show ? 'text' : 'password') : type}
         className={inputClass}
         id={id}
         name={name}
@@ -35,6 +38,16 @@ const InputField: React.FC<Props> = ({
         onChange={onChange}
         onBlur={onBlur}
       />
+
+      {type && (
+        <InputFieldIcon onClick={toggleShowPassword}>
+          {show ? (
+            <DPIconHide className="icon" />
+          ) : (
+            <DPIconUnHide className="icon" />
+          )}
+        </InputFieldIcon>
+      )}
     </Container>
   );
 };
