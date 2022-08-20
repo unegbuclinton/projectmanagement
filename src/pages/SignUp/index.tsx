@@ -45,7 +45,7 @@ const SignUp: React.FC<AppProps> = () => {
       <SignUpForm onSubmit={formik.handleSubmit}>
         <InputWrapper>
           <InputField
-            type="text"
+            type=""
             placeholder="Full Name"
             inputClass="signup-input"
             id="fullName"
@@ -60,7 +60,7 @@ const SignUp: React.FC<AppProps> = () => {
         </InputWrapper>
         <InputWrapper>
           <InputField
-            type="text"
+            type=""
             placeholder="Email"
             inputClass="signup-input"
             id="email"
@@ -75,7 +75,7 @@ const SignUp: React.FC<AppProps> = () => {
         </InputWrapper>
         <InputWrapper>
           <InputField
-            type="text"
+            type="password"
             placeholder="Password"
             inputClass="signup-input"
             id="password"
@@ -90,7 +90,7 @@ const SignUp: React.FC<AppProps> = () => {
         </InputWrapper>
         <InputWrapper>
           <InputField
-            type="text"
+            type="password"
             placeholder="Rewrite Password"
             inputClass="signup-input"
             id="repeatPassword"

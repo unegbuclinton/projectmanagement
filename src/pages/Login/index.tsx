@@ -34,7 +34,7 @@ const LoginPage: React.FC<{}> = () => {
       <LoginForm onSubmit={formik.handleSubmit}>
         <div className="input-wrapper">
           <InputField
-            type="text"
+            type=""
             placeholder="Email Address"
             inputClass="login-input"
             id="email"
@@ -50,7 +50,7 @@ const LoginPage: React.FC<{}> = () => {
 
         <div className="input-wrapper">
           <InputField
-            type="text"
+            type="password"
             placeholder="Password"
             inputClass="login-input"
             id="password"

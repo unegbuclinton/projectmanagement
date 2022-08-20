@@ -73,7 +73,7 @@ const DashBoardLayout: React.FC<Props> = ({ children, text, onClick }) => {
             </span>
             {/* <span className="bar-text">DashBoard </span> */}
           </DashBoardContainer>
-          <DashBoardContainer>
+          <DashBoardContainer onClick={() => navigate('/message')}>
             <span className="bar-icon">
               <DPIconMessage />
             </span>
@@ -87,7 +87,7 @@ const DashBoardLayout: React.FC<Props> = ({ children, text, onClick }) => {
             </span>
             {/* <span className="bar-text">Projects </span> */}
           </DashBoardContainer>
-          <DashBoardContainer>
+          <DashBoardContainer onClick={() => navigate('/settings')}>
             <span className="bar-icon">
               <DPIconSettings />
             </span>
@@ -104,7 +104,6 @@ export default DashBoardLayout;
 
 const DashBoardWrapper = styled.div`
   height: 100%;
-  position: relative;
 `;
 
 const DashBoardHeader = styled.div<{ header: boolean }>`
@@ -113,7 +112,7 @@ const DashBoardHeader = styled.div<{ header: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
   padding: 2rem 0;
   background: ${({ header }) => (header ? '#101010' : 'transparent')};
   .dashboard-header {

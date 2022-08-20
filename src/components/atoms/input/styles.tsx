@@ -13,4 +13,12 @@ export const Input = styled.input`
   margin-bottom: 1rem;
 `;
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  position: relative;
+`;
+
+export const InputFieldIcon = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 9px;
+`;
